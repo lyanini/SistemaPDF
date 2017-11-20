@@ -9,8 +9,8 @@
 <body>
 	<div class="wrap">
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-			<input type="text" class="form-control" name="nombre" placeholder="Nombre" id="nombre" value="">
-			<input type="email" class="form-control" name="correo" placeholder="Correo" id="correo" value="">
+			<input type="text" class="form-control" name="nombre" placeholder="Nombre" id="nombre" value=" <?php if(!$enviado && isset($nombre)) echo $nombre ?>">
+			<input type="email" class="form-control" name="correo" placeholder="Correo" id="correo" value="<?php if(!$enviado && isset($correo)) echo $correo ?>">
 
 			<textarea name="mensaje" id="mensaje" class="form-control" placeholder="Mensaje"></textarea>
 			
@@ -20,11 +20,11 @@
 				</div>
 			<?php elseif($enviado): ?>
 				 <div class="alert succes">
-				 	<!--<p>Enviado correctamente</p>-->
-					<script>
+				 	<p>Enviado correctamente</p>
+					<!--<script>
 						alert("Valores enviados");
 
-					</script>
+					</script>-->
 				</div>
 			<?php endif ?>
 			
