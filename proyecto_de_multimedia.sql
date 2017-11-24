@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2017 a las 22:04:52
+-- Tiempo de generación: 24-11-2017 a las 22:16:50
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -32,7 +32,8 @@ CREATE TABLE `administrador_alumno` (
   `id_administradorALU` int(30) NOT NULL,
   `administrador_rut` int(8) NOT NULL,
   `clave_administrador` varchar(40) NOT NULL,
-  `rut_super` int(8) NOT NULL
+  `rut_super` int(8) NOT NULL,
+  `cod_verificador` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -45,7 +46,8 @@ CREATE TABLE `administrador_archivo` (
   `id_administradorAR` int(30) NOT NULL,
   `rut_administrador` int(8) NOT NULL,
   `clave_administrador` varchar(30) NOT NULL,
-  `rut_super` int(8) NOT NULL
+  `rut_super` int(8) NOT NULL,
+  `id_verificador` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -104,7 +106,8 @@ CREATE TABLE `usuario` (
   `telefono` int(7) NOT NULL,
   `domicilio` varchar(100) NOT NULL,
   `fecha` date NOT NULL,
-  `id_administradorALU` int(30) NOT NULL
+  `id_administradorALU` int(30) NOT NULL,
+  `id_verificador` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
