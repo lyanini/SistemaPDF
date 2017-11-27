@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			max-width: 80%;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		header{
+			background: #056898;
+			height: 50px;
+			padding: 1rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex: 1 1 100%;
+			margin-bottom: 1rem;
+			order: 0;
+			
+		}	
+		header a{
+			flex: 0 1 150px;
+		}
+		header a img{
+			width: 100%;
+
+			
+		}
+		header nav ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+
+		}
+		header nav ul li a{
+			display: block;
+			color: #FFF;
+			padding: 1rem;
+			margin: 0 .3rem;
+			text-decoration: none;
+
+		}
+		.lateral-1{
+			background: #FFF;
+			flex: 1 1 0px;
+			padding: 1rem;
+			order: 1
+		}
+		.contenido{
+			background: #DB3E3E;
+			flex: 8 1 0px;
+			padding: 1rem;
+			order: 2
+			
+		}
+		.lateral-2{
+			background: #FFF;
+			flex: 1 1 0px;
+			padding: 1rem;
+			order: 3
+		}
+
+		footer{
+			background: #333232;
+			color: #FFF;
+			flex: 1 1 100%;
+			text-align: center;
+			order: 4;
+			
+		}
+		@media (max-width: 1000px){
+			.container{
+				max-width: 90%;
+			}
+		}	
+		@media (max-width: 700px){
+				.lateral1,.lateral-2,.contenido{
+				flex: 1 1 100%;
+			}
+		}
+	
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<a href="#">
+				<img src="logo_upla sin fondo.png" alt="logo_portal">
+			</a>
+			<nav>
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Usuario</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<article class="contenido">
+			<h1>Sacate uno</h1>
+			<hr>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+
+		<article class="lateral-1"></article>
+		<article class="lateral-2"></article>
+
+		<footer>
+			<p>Contacto</p>
+		</footer>
+
+	</div>
+</body>
+</html>

@@ -9,13 +9,13 @@
 body {
 	font-size: 16px;
 	font-family: 'Raleway', sans-serif;
-	background: #1f1f1f;
+	background: #f2f2f2;
 	color:#fff;
 }
 
 a {
 	text-decoration: none;
-	color:#B8711B;
+	color:#007399;
 }
 
 a:hover {
@@ -30,7 +30,7 @@ a:hover {
 
 .titulo {
 	font-weight: 300;
-	color: #B8711B;
+	color: #007399;
 	text-align: center;
 	margin: 60px 0 30px 0;
 }
@@ -38,13 +38,13 @@ a:hover {
 .border {
 	border:none;
 	margin-bottom: 5px; 
-	border-top:10px solid #B8711B;
+	border-top:10px solid #007399;
 	background: none;
 	color:none;
 }
 
 .formulario {
-	background: #B8711B;
+	background: #007399;
 	padding: 30px;
 	margin-bottom: 30px;
 }
