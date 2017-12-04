@@ -111,7 +111,7 @@
 </head>
 <body>
 	<div class="container">
-		<header>
+		<header class="">
 			<a href="#">
 				<img src="images/logo_UPLA.png" alt="logo_portal">
 			</a>
@@ -144,25 +144,16 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
-			      <th scope="row">Documento 1</th>
-			      <td>Mark</td>
-			      
-			      <td><button type="button" class="btn btn-primary">Primary</button></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">Documento 2</th>
-			      <td>Jacob</td>
-			     
-			      <td><button type="button" class="btn btn-primary">Primary</button></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">Documento 3</th>
-			      <td>Larry</td>
-			     
-			      <td><button type="button" class="btn btn-primary">Primary</button></td>
-			    </tr>
+			    <?php 
+
+					include("conexion");
+					
+
+
+			    ?>
 			  </tbody>
+
+
 			</table>
 		</article>
 
@@ -174,5 +165,10 @@
 		</footer>
 
 	</div>
+
+
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
 </body>
 </html>
