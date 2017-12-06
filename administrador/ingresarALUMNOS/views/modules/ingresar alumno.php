@@ -104,15 +104,22 @@
 
 </fieldset>
 </form>
+
 <?php
 
+include "controllers/controller.php";
 $registro = new MvcController();
 $registro -> registroalumnoscontroller();
 
 
+	
+
 
 ?>
+
+
 	
 </body>
 </html>
+
 
