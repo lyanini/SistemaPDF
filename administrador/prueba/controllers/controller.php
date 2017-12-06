@@ -2,17 +2,14 @@
 
 class MvcController{
 
-	#LLAMADA A LA PLANTILLA
-	#-------------------------------------
-
+	
 	public function pagina(){	
 		
 		include "views/template.php";
-	
+		
 	}
 
-	#ENLACES
-	#-------------------------------------
+
 
 	public function enlacesPaginasController(){
 
@@ -33,16 +30,33 @@ class MvcController{
 
 	}
 
-	#REGISTRO DE USUARIOS
-	#------------------------------------
+	
 	public function registroUsuarioController(){
+        
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+		
+			$datoscontroller = array("Nombres"=>$_POST["nombres"],
+			                         "apellidopaterno"=>$_POST["apellidopaterno"],
+			                         "apellidomaterno"=>$_POST["apellidomaterno"],                                           
+			                         "carrera"=>$_POST["carrera"],                                                                    
+			                         "numerodematricula"=>$_POST["numerodematricula"],                                                 
+			                         "telefono"=>$_POST["telefono"],                                                                  
+			                         "facultad"=>$_POST["facultad"],                                                                   
+			                         "promocion"=>$_POST["promocion"],                                                                 
+			                         "domicilio"=>$_POST["domicilio"]); 
 
-		if(isset($_POST["Nombres"])){
+<<<<<<< HEAD
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 			$datoscontroller = array("Nombres" => $_post["Nombres"], "apellidopaterno" => $_post["apellidopaterno"] ,"apellidomaterno"=> $_post["apellidomaterno"],"carrera"=> $_post["carrrera"],"numerodematricula"=> $_post["numerodematricula"],"telefone"=> $_post["telefone"],"facultad"=>$_post["facultad"],"promocion"=> $_post["promocion"],"domicilio"=> $_post["domicilio"]);
 
 			$respuesta = Datos::registroUsuarioModel($datosController, "usuario");
 
+=======
+			
+			$respuesta = Datos::registroUsuarioModel($datoscontroller, "usuario");
+			
+>>>>>>> 1be7f0b4b9b20a5830f827ce9d4d7cc02f38343b
 			if($respuesta == "success"){
 
 				header("location:index.php?action=ok");
@@ -58,16 +72,15 @@ class MvcController{
 
 	}
 
-	#INGRESO DE USUARIOS
-	#------------------------------------
+	
 	public function ingresoUsuarioController(){
 
 		if(isset($_POST["usuarioIngreso"])){
 
-			$datosController = array( "usuario"=>$_POST["usuarioIngreso"], 
+			$datoscontroller = array( "usuario"=>$_POST["usuarioIngreso"], 
 								      "password"=>$_POST["passwordIngreso"]);
 
-			$respuesta = Datos::ingresoUsuarioModel($datosController, "usuarios");
+			$respuesta = Datos::ingresoUsuarioModel($datoscontroller, "usuarios");
 
 			if($respuesta["usuario"] == $_POST["usuarioIngreso"] && $respuesta["password"] == $_POST["passwordIngreso"]){
 
@@ -89,97 +102,12 @@ class MvcController{
 
 	}
 
-	#VISTA DE USUARIOS
-	#------------------------------------
-
-	public function vistaUsuariosController(){
-
-		$respuesta = Datos::vistaUsuariosModel("usuarios");
-
-		#El constructor foreach proporciona un modo sencillo de iterar sobre arrays. foreach funciona sólo sobre arrays y objetos, y emitirá un error al intentar usarlo con una variable de un tipo diferente de datos o una variable no inicializada.
-
-		foreach($respuesta as $row => $item){
-		echo'<tr>
-				<td>'.$item["usuario"].'</td>
-				<td>'.$item["password"].'</td>
-				<td>'.$item["email"].'</td>
-				<td><a href="index.php?action=editar&id='.$item["id"].'"><button>Editar</button></a></td>
-				<td><a href="index.php?action=usuarios&idBorrar='.$item["id"].'"><button>Borrar</button></a></td>
-			</tr>';
-
-		}
-
-	}
-
-	#EDITAR USUARIO
-	#------------------------------------
-
-	public function editarUsuarioController(){
-
-		$datosController = $_GET["id"];
-		$respuesta = Datos::editarUsuarioModel($datosController, "usuarios");
-
-		echo'<input type="hidden" value="'.$respuesta["id"].'" name="idEditar">
-
-			 <input type="text" value="'.$respuesta["usuario"].'" name="usuarioEditar" required>
-
-			 <input type="text" value="'.$respuesta["password"].'" name="passwordEditar" required>
-
-			 <input type="email" value="'.$respuesta["email"].'" name="emailEditar" required>
-
-			 <input type="submit" value="Actualizar">';
-
-	}
-
-	#ACTUALIZAR USUARIO
-	#------------------------------------
-	public function actualizarUsuarioController(){
-
-		if(isset($_POST["usuarioEditar"])){
-
-			$datosController = array( "id"=>$_POST["idEditar"],
-							          "usuario"=>$_POST["usuarioEditar"],
-				                      "password"=>$_POST["passwordEditar"],
-				                      "email"=>$_POST["emailEditar"]);
-			
-			$respuesta = Datos::actualizarUsuarioModel($datosController, "usuarios");
-
-			if($respuesta == "success"){
-
-				header("location:index.php?action=cambio");
-
-			}
-
-			else{
-
-				echo "error";
-
-			}
-
-		}
 	
-	}
 
-	#BORRAR USUARIO
-	#------------------------------------
-	public function borrarUsuarioController(){
+	
 
-		if(isset($_GET["idBorrar"])){
 
-			$datosController = $_GET["idBorrar"];
-			
-			$respuesta = Datos::borrarUsuarioModel($datosController, "usuarios");
 
-			if($respuesta == "success"){
-
-				header("location:index.php?action=usuarios");
-			
-			}
-
-		}
-
-	}
-
-}
+}	
 
 ?>

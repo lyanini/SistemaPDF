@@ -1,16 +1,16 @@
 <h1>REGISTRO DE ALUMNOS</h1>
 
-<form method="post">
+<form method="POST">
 	
-	<input type="text" placeholder="nombre" name="nombres" required>
+	<input type="text" placeholder="nombres" name="nombres" required>
 
 	<input type="text" placeholder="apellido paterno" name="apellidopaterno" required>
 
-	<input type="text" placeholder="apellido materno" name="pellidomaterno" required>
+	<input type="text" placeholder="apellido materno" name="apellidomaterno" required>
 
-	<input type="number" placeholder="numero de matricula" name="numerodematricula" required>
+	<input type="text" placeholder="numero de matricula" name="numerodematricula" required>
 
-	<input type="number" placeholder="telefono" name="telefono" required>
+	<input type="text" placeholder="telefono" name="telefono" required>
 
     <input type="text" placeholder="facultad" name="facultad" required>
 

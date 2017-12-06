@@ -52,11 +52,11 @@
 				<div class="col-md-4">
 					
 					<ul class="list-group">
-						<li class="list-group-item active">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Morbi leo risus</li>
-						<li class="list-group-item">Porta ac consectetur ac</li>
-						<li class="list-group-item">Vestibulum at eros</li>
+						<li class="list-group-item active">Tipo de documentos</li>
+						<li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Documento 1</li>
+						<li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Documento 2</li>
+						<li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Documento 3</li>
+						<li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Documento 4</li>
 					</ul>
 
 
@@ -99,6 +99,24 @@
 						      <td>Larry</td>
 						      <td>the Bird</td>
 						      <td><a class="btn btn-primary" href="#" role="button">Pedir</a></td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">4</th>
+						      	<td>Larry</td>
+						      	<td>the Bird</td>
+						      	<td><a class="btn btn-primary" href="#" role="button">Pedir</a></td>
+						    </tr> 
+						    <tr>
+						    	<th scope="row">5</th>
+						      	<td>Larry</td>
+						      	<td>the Bird</td>
+						      	<td><a class="btn btn-primary" href="#" role="button">Pedir</a></td>
+						    </tr>
+						    <tr>
+						    	<th scope="row">6</th>
+						      	<td>Larry</td>
+						      	<td>the Bird</td>
+						      	<td><a class="btn btn-primary" href="#" role="button">Pedir</a></td>
 						    </tr>
 				  		</tbody>
 					</table>
