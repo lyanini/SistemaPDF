@@ -28,24 +28,22 @@
 			        <div id="sidebar-wrapper">
 			            <ul class="sidebar-nav">
 			                <li class="sidebar-brand">
-			                    <a href="cerrar.php"><i class="fa fa-user-times" aria-hidden="true"></i> Cerrar Sesión</a> 			                        			                    
+			                    <a href="cerrar.php"> 
+			                        Cerrar Sesión
+			                    </a>
 			                </li>
 			                <li>
-			                    <a href="contenido.php"><i class="fa fa-archive" aria-hidden="true"></i> Inicio</a>
+			                    <a href="contenido.php">Inicio</a>
 			                </li>
 			                <li>
-			                    <a href="aprobar.php"><i class="fa fa-check-square-o" aria-hidden="true"></i> Check</a>
+			                    <a href="aprobar.php">Check</a>
 			                </li>
-			                <li>
-			                	<a href="gestiondoc.php"><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
-			                </li>
-
 			            </ul>
 	    		</div>
-		<div class="col-md-1" >
+		<div class="col-md-2" >
 			
 		</div>
-			<div class="col-md-9">
+			<div class="col-md-8">
 				<h3 class="titulo">Descargar documentos</h3>
 				
 				<hr class="border">
@@ -138,6 +136,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <!-- Menu con JavaScript -->
-    <script type="text/javascript" src="js/menu.js"></script>
+    <script>
+	    $("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
 </body>
 </html>

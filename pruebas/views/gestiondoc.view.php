@@ -18,11 +18,21 @@
 	<div class="container-fluid">
 		<div class="column">
 		<div class="row align-items-start">
-    		<div class="nav-superior">
+    		<div class="col-lg-12" style="background: #056898"> 
+
 				<img class="logo rounded " src="img/logo_UPLA.png" alt="Generic placeholder image">
       				<div class="clearfix"></div>
       			<a href="#menu-toggle" class="btn btn-info" id="menu-toggle"><i class="fa fa-hand-o-left" aria-hidden="true"></i> Menu de acceso</a>
+  	  			<!-- <button class="btn btn-primary dropdown-toggle " href="#" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-fw"></i> Usuario</button>
+  	  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    				<a class="dropdown-item" href="cerrar.php" >Cerrar secion</a>
+					<a class="dropdown-item" href="contenido.php" >Inicio</a>
+					
+  				</div> -->
+  
 			</div>
+
+				
 				
     		</div>
     	
@@ -31,17 +41,16 @@
 			        <!-- menu lateral -->
 			        <div id="sidebar-wrapper">
 			            <ul class="sidebar-nav">
-			                    <li class="sidebar-brand">
-			                    <a href="cerrar.php"><i class="fa fa-user-times" aria-hidden="true"></i> Cerrar Sesión</a> 			                        			                    
+			                <li class="sidebar-brand">
+			                    <a href="cerrar.php"> 
+			                        Cerrar Sesión
+			                    </a>
 			                </li>
 			                <li>
-			                    <a href="contenido.php"><i class="fa fa-archive" aria-hidden="true"></i> Inicio</a>
+			                    <a href="contenido.php">Inicio</a>
 			                </li>
 			                <li>
-			                    <a href="aprobar.php"><i class="fa fa-check-square-o" aria-hidden="true"></i> Check</a>
-			                </li>
-			                <li>
-			                	<a href="gestiondoc.php"><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
+			                    <a href="aprobar.php">Check</a>
 			                </li>
 			            </ul>
 	    		</div>
