@@ -1,6 +1,6 @@
 <h1>REGISTRO DE ALUMNOS</h1>
 
-<form method="post">
+<form method="POST">
 	
 	<input type="text" placeholder="nombres" name="nombres" required>
 

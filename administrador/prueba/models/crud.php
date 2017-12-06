@@ -8,26 +8,26 @@ class Datos extends Conexion{
 
 	
 	public function registroUsuarioModel($datosModel, $tabla){
-
 		
+		$stmt = Conexion::conectar()->prepare("INSERT INTO 
+			$tabla (apellido_parterno, apellido_materno, facultad, carrera, nume_matricula, promocion, nombre,telefono, domicilio) 
+			VALUES (:apellidopaterno,:apellidomaterno,:facultad,:carrera,:numematricula,:promocion,:nombre,:telefono,:domicilio");
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (apellido_parterno, apellido_materno, facultad, carrera, nume_matricula, promocion, nombre,telefono, domicilio) VALUES (:apellidoparterno,:apellidomaterno,:facultad,:carrera,:numematricula,:promocion,:nombres,:telefono,:domicilio");
+			$stmt->bindParam(":apellidopaterno", $datosModel["apellidopaterno"], PDO::PARAM_STR);
+			$stmt->bindParam(":apellidomaterno", $datosModel["apellidomaterno"], PDO::PARAM_STR);
+			$stmt->bindParam(":facultad", $datosModel["facultad"], PDO::PARAM_STR);
+			$stmt->bindParam(":carrera", $datosModel["carrera"], PDO::PARAM_STR);
+			$stmt->bindParam(":numematricula", $datosModel["numerodematricula"], PDO::PARAM_STR);
+			$stmt->bindParam(":promocion", $datosModel["promocion"], PDO::PARAM_STR);
+			$stmt->bindParam(":nombre", $datosModel["nombres"], PDO::PARAM_STR);
+			$stmt->bindParam(":telefono", $datosModel["telefono"], PDO::PARAM_STR);
+			$stmt->bindParam(":domicilio", $datosModel["domicilio"], PDO::PARAM_STR);	
 
-		$stmt->bindparam(":apellido_parterno", $datosModel["apellidopaterno"] ,PDO::PARAM_STR);
-		$stmt->bindparam(":apellido_materno", $datosModel["apellidomaterno"] ,PDO::PARAM_STR);
-		$stmt->bindparam(":facultad", $datosModel["facultad"] ,PDO::PARAM_STR);
-		$stmt->bindparam(":carrera", $datosModel["carrera"] ,PDO::PARAM_STR);
-		$stmt->bindparam(":nume_matricula", $datosModel["numerodematricula"] ,PDO::PARAM_STR);
-		$stmt->bindparam(":promocion", $datosModel["promocion"] ,PDO::PARAM_STR);
-		$stmt->bindparam(":nombre", $datosModel["nombres"] ,PDO::PARAM_STR);
-		$stmt->bindparam(":telefono", $datosModel["telefono"] ,PDO::PARAM_STR);
-		$stmt->bindparam(":domicilio", $datosModel["domicilio"] ,PDO::PARAM_STR);	
-
-		
+			
 
 		if($stmt->execute()){
 
-			return "success";
+			return "insercion exitosa";
 
 		}
 
@@ -40,7 +40,7 @@ class Datos extends Conexion{
 		$stmt->close();
 
 	}
-
+/*
 	
 	public function ingresoUsuarioModel($datosModel, $tabla){
 
@@ -54,7 +54,7 @@ class Datos extends Conexion{
 		$stmt->close();
 
 	}
-
+*/
 	
 
 	

@@ -6,7 +6,7 @@ class MvcController{
 	public function pagina(){	
 		
 		include "views/template.php";
-	
+		
 	}
 
 
@@ -32,9 +32,9 @@ class MvcController{
 
 	
 	public function registroUsuarioController(){
-
-		if(isset($_POST["nombres"])){
-			
+        
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+		
 			$datoscontroller = array("Nombres"=>$_POST["nombres"],
 			                         "apellidopaterno"=>$_POST["apellidopaterno"],
 			                         "apellidomaterno"=>$_POST["apellidomaterno"],                                           
@@ -44,7 +44,8 @@ class MvcController{
 			                         "facultad"=>$_POST["facultad"],                                                                   
 			                         "promocion"=>$_POST["promocion"],                                                                 
 			                         "domicilio"=>$_POST["domicilio"]); 
-			echo var_dump($datoscontroller);
+
+			
 			$respuesta = Datos::registroUsuarioModel($datoscontroller, "usuario");
 			
 			if($respuesta == "success"){
@@ -67,10 +68,10 @@ class MvcController{
 
 		if(isset($_POST["usuarioIngreso"])){
 
-			$datosController = array( "usuario"=>$_POST["usuarioIngreso"], 
+			$datoscontroller = array( "usuario"=>$_POST["usuarioIngreso"], 
 								      "password"=>$_POST["passwordIngreso"]);
 
-			$respuesta = Datos::ingresoUsuarioModel($datosController, "usuarios");
+			$respuesta = Datos::ingresoUsuarioModel($datoscontroller, "usuarios");
 
 			if($respuesta["usuario"] == $_POST["usuarioIngreso"] && $respuesta["password"] == $_POST["passwordIngreso"]){
 
