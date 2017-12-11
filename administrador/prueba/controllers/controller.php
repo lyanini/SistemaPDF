@@ -33,7 +33,7 @@ class MvcController{
 	
 	public function registroUsuarioController(){
         
-		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+		if(isset($_POST["nombres"])){
 		
 			$datoscontroller = array("Nombres"=>$_POST["nombres"],
 			                         "apellidopaterno"=>$_POST["apellidopaterno"],

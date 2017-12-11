@@ -59,7 +59,8 @@
 				    <tr>
 				      <th scope="row"><div class="form-check">
 						  <label class="form-check-label">
-						    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+						  	<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="activo" name="opcion1"> activo
+
 						  </label>
 						</div>
 					</th>
@@ -73,8 +74,10 @@
 								<label class="form-check-label">
 						    		<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
 						    	</label>
+						    	
 							</div>
 						</th>
+                           
 				      <td>Mark</td>
 				      <td>Otto</td>
 				      <td><button type="button" class="btn btn-warning">Descripcion solicitud</button></td>
@@ -87,6 +90,7 @@
   								</label>
 							</div>
 						</th>
+							
 				      <td>Jacob</td>
 				      <td>Thornton</td>
 				      <td><button type="button" class="btn btn-warning">Descripcion solicitud</button></td>
@@ -99,6 +103,8 @@
   								</label>
 							</div>
 						</th>
+
+
 				      <td>Jacob</td>
 				      <td>Thornton</td>
 				      <td><button type="button" class="btn btn-warning">Descripcion solicitud</button></td>
