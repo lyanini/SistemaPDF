@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2017 a las 11:52:38
+-- Tiempo de generación: 11-12-2017 a las 07:38:42
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -81,7 +81,11 @@ CREATE TABLE `archivos` (
   `nombre` varchar(20) NOT NULL,
   `id_archivo` int(30) NOT NULL,
   `id_administradorAR` int(30) NOT NULL,
-  `id_usuario` int(50) NOT NULL
+  `id_usuario` int(50) NOT NULL,
+  `validador_dae` varchar(15) DEFAULT NULL,
+  `validador_bibloteca` varchar(20) DEFAULT NULL,
+  `validador_aran` varchar(20) DEFAULT NULL,
+  `validador_jefcarr` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -176,6 +180,13 @@ CREATE TABLE `super_usario` (
   `codigo_verificador` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `super_usario`
+--
+
+INSERT INTO `super_usario` (`id_superUsuario`, `rut`, `clave`, `codigo_verificador`) VALUES
+(0, 18784542, '753951', '4');
+
 -- --------------------------------------------------------
 
 --
@@ -184,21 +195,28 @@ CREATE TABLE `super_usario` (
 
 CREATE TABLE `usuario` (
   `id_usuario` int(50) NOT NULL,
-  `rut_usuario` int(8) NOT NULL,
-  `clave_usuario` varchar(40) NOT NULL,
-  `apellido_parterno` varchar(40) NOT NULL,
-  `apellido_materno` varchar(40) NOT NULL,
-  `facultad` varchar(60) NOT NULL,
-  `carrera` varchar(120) NOT NULL,
-  `nume_matricula` int(8) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido_parterno` varchar(50) NOT NULL,
+  `apellido_materno` varchar(50) NOT NULL,
+  `nume_matricula` char(8) NOT NULL,
+  `telefono` char(7) NOT NULL,
+  `facultad` varchar(50) NOT NULL,
+  `carrera` varchar(50) NOT NULL,
   `promocion` int(4) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `telefono` int(7) NOT NULL,
-  `domicilio` varchar(100) NOT NULL,
-  `fecha` date NOT NULL,
-  `id_verificador` char(1) NOT NULL,
-  `id_administradorALU` int(30) NOT NULL
+  `domicilio` varchar(50) NOT NULL,
+  `clave_usuario` varchar(40) DEFAULT NULL,
+  `id_verificador` char(1) DEFAULT NULL,
+  `id_administradorALU` int(30) DEFAULT NULL,
+  `rut_usuario` int(8) NOT NULL,
+  `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido_parterno`, `apellido_materno`, `nume_matricula`, `telefono`, `facultad`, `carrera`, `promocion`, `domicilio`, `clave_usuario`, `id_verificador`, `id_administradorALU`, `rut_usuario`, `fecha`) VALUES
+(1, 'yan', 'luka', 'alarcon', '18784542', '2397536', 'ingeneria', 'informatica', 2014, 'baron', NULL, NULL, NULL, 0, '0000-00-00');
 
 --
 -- Índices para tablas volcadas
@@ -331,7 +349,7 @@ ALTER TABLE `secretaria`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Restricciones para tablas volcadas
 --
