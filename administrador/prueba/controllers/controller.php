@@ -45,9 +45,24 @@ class MvcController{
 			                         "promocion"=>$_POST["promocion"],                                                                 
 			                         "domicilio"=>$_POST["domicilio"]); 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+			$datoscontroller = array("Nombres" => $_post["Nombres"], "apellidopaterno" => $_post["apellidopaterno"] ,"apellidomaterno"=> $_post["apellidomaterno"],"carrera"=> $_post["carrrera"],"numerodematricula"=> $_post["numerodematricula"],"telefone"=> $_post["telefone"],"facultad"=>$_post["facultad"],"promocion"=> $_post["promocion"],"domicilio"=> $_post["domicilio"]);
+
+			$respuesta = Datos::registroUsuarioModel($datosController, "usuario");
+
+=======
 			
 			$respuesta = Datos::registroUsuarioModel($datoscontroller, "usuario");
 			
+>>>>>>> 1be7f0b4b9b20a5830f827ce9d4d7cc02f38343b
+=======
+			
+			$respuesta = Datos::registroUsuarioModel($datoscontroller, "usuario");
+			
+>>>>>>> 1be7f0b4b9b20a5830f827ce9d4d7cc02f38343b
 			if($respuesta == "success"){
 
 				header("location:index.php?action=ok");
