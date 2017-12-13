@@ -51,7 +51,7 @@
             <a href="check.php"><i class="fa fa-check-square-o" aria-hidden="true"></i> Check</a>
           </li>
           <li class="menu-item">
-            <a href=""><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
+            <a href="#"><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
           </li>
           <li class="menu-item">
             <a href="ingresar.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Ingresar usuario</a>

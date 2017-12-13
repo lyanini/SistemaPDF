@@ -76,29 +76,48 @@
 
     <!-- Contenido -->
     <div class="container">
-      <h1 class="mt-5">Solicitar documentos</h1>
+      <h1 class="mt-5">Ingresar usuario</h1>
       <hr class="border">
-      <!-- Paginacion papeles -->
-      <nav aria-label="breadcrumb" role="navigation">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item" aria-current="page"><a href="index.php">Solicitar</a></li>
-          <li class="breadcrumb-item active">Emitidos</li>
-          <li class="breadcrumb-item active"><a href="pendientes.php">Pendientes</a></li>
-        </ol>
-      </nav>
-
-      <div class="container">
-      <table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
-          <thead>
-            <tr>
-              <th>Fecha de Solicitud</th>
-              <th>Nombre del Documento</th>
-              <th>Tipo de Documento</th>
-            </tr>
-          </thead>
-      </table>
-    </div>
-    </div>
+      
+      <p>Facultad:</p>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon "><i class="fa fa-university fa-fw"></i></span>
+          <input type="text" class="form-control" name="" value="" id=""  >
+        </div>
+        <br><p>Carrera:</p>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon "><i class="fa fa-book fa-fw"></i></span>
+          <input type="text" class="form-control" name="" value="" id=""  >
+        </div>
+        <br><p>Numero de matricula:</p>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon "><i class="fa fa-list fa-fw"></i></span>
+          <input type="text" class="form-control" name="" value="" id=""  >
+        </div>
+        <br><p>Promocion:</p>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon "><i class="fa fa-calendar fa-fw"></i></span>
+          <input type="text" class="form-control" name="" value="" id=""  >
+        </div>
+        <br><p>Nombre:</p>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon "><i class="fa fa-users fa-fw"></i></span>
+          <input type="text" class="form-control" name="" value="" id=""  >
+        </div>
+        <br><p>Domicilio:</p>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon "><i class="fa fa-home fa-fw"></i></span>
+          <input type="text" class="form-control" name="" value="" id=""  >
+        </div>
+        <br><p>Telefono:</p>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon "><i class="fa fa-phone fa-fw"></i></span>
+          <input type="text" class="form-control" name="" value="" id=""  >
+        </div>
+        <br>
+        <a href="aprobar.php"><button><i class="fa fa-arrow-left" aria-hidden="true"></i></button></a>
+        <hr>
+      
 
     <!-- fin contenido -->
     
@@ -108,27 +127,6 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
     <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
-
-    <!-- funcion tabla -->
-    <script type="text/javascript" language="javascript" >
-      $(document).ready(function() {
-        var dataTable = $('#employee-grid').DataTable( {
-          "processing": true,
-          "serverSide": true,
-          "ajax":{
-            url :"emit.php", // json datasource
-            type: "post",  // method  , by default get
-            error: function(){  // error handling
-              $(".employee-grid-error").html("");
-              $("#employee-grid").append('<tbody class="employee-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
-              $("#employee-grid_processing").css("display","none");
-              
-            }
-          }
-        } );
-      } );
-    </script>
-
   </body>
 
 </html>

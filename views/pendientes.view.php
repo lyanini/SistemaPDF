@@ -51,7 +51,7 @@
             <a href="check.php"><i class="fa fa-check-square-o" aria-hidden="true"></i> Check</a>
           </li>
           <li class="menu-item">
-            <a href=""><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
+            <a href="#"><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
           </li>
           <li class="menu-item">
             <a href="ingresar.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Ingresar usuario</a>
@@ -84,9 +84,6 @@
           <li class="breadcrumb-item" aria-current="page"> <a href="contenido.php">Solicitar </a></li>
           <li class="breadcrumb-item active"><a href="emitidos.php">Emitidos</a></li>
           <li class="breadcrumb-item active">Pendientes</li>
-          <li class="menu-item">
-            <a href="ingresar.php"><i class="fa fa-pie-chart" aria-hidden="true"></i> Graficos</a>
-          </li>
         </ol>
       </nav>
 
@@ -94,7 +91,10 @@
       <table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
           <thead>
             <tr>
-              <th>    </th>
+              <th>VB Coordinador</th>
+              <th>VB Bibioteca</th>
+              <th>VB DAE</th>
+              <th>VB Aranceles</th>
               <th>Nombre del Documento</th>
               <th>Tipo de Documento</th>
             </tr>

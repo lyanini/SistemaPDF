@@ -51,7 +51,7 @@
             <a href="check.php"><i class="fa fa-check-square-o" aria-hidden="true"></i> Check</a>
           </li>
           <li class="menu-item">
-            <a href=""><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
+            <a href="#"><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
           </li>
           <li class="menu-item">
             <a href="ingresar.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Ingresar usuario</a>
@@ -84,12 +84,15 @@
       $query="SELECT nombre, count(tipo_archivo) as number FROM archivos WHERE tipo_archivo='Certificados de estudiantes regulares y para egresados' GROUP BY nombre";
       $results =mysqli_query($connect,$query);
 
+      
+
     ?>
     <div id="donut_single" style="width: 900px; height: 500px;"></div>
         <br>
         
-      
-        
+    
+
+    
     <!-- fin contenido -->
     
 
