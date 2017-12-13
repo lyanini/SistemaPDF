@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2017 a las 07:38:42
+-- Tiempo de generación: 13-12-2017 a las 05:14:34
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -85,7 +85,8 @@ CREATE TABLE `archivos` (
   `validador_dae` varchar(15) DEFAULT NULL,
   `validador_bibloteca` varchar(20) DEFAULT NULL,
   `validador_aran` varchar(20) DEFAULT NULL,
-  `validador_jefcarr` varchar(20) DEFAULT NULL
+  `validador_jefcarr` varchar(20) DEFAULT NULL,
+  `tipo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
