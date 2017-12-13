@@ -43,6 +43,9 @@
 			                <li>
 			                	<a href="gestiondoc.php"><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
 			                </li>
+			                <li>
+			                	<a href="ingresar.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Ingresar usuario</a>
+			                </li>
 			            </ul>
 	    		</div>
 

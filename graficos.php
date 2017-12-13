@@ -1,7 +1,7 @@
 <?php session_start();
 
 if (isset($_SESSION['usuario'])) {
-	require 'views/index.view.php';
+	require 'views/graficos.view.php';
 
 }
 else{

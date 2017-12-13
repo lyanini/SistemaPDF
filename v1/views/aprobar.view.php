@@ -20,7 +20,8 @@
     			<div class="nav-superior"> 
 					<img class="logo rounded " src="img/logo_UPLA.png" alt="Generic placeholder image">
 	      				<div class="clearfix"></div>
-	      			<a href="#menu-toggle" class="btn btn-info" id="menu-toggle"><i class="fa fa-hand-o-left" aria-hidden="true"></i> Menu de acceso</a> 
+	      			<a href="#menu-toggle" class="btn btn-info" id="menu-toggle"><i class="fa fa-hand-o-left" aria-hidden="true"></i> Menu de acceso</a>
+	      		</div> 
 			</div>		
     	</div>
     	<div id="wrapper">
@@ -39,6 +40,9 @@
 			                <li>
 			                	<a href="gestiondoc.php"><i class="fa fa-file" aria-hidden="true"></i> Gestion documentos</a>
 			                </li>
+			                <li>
+			                	<a href="ingresar.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Ingresar usuario</a>
+			                </li>
 		            </ul>
 	    </div>
 		<div class="col-md-1" ></div>
@@ -56,12 +60,29 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-				    <tr>
-				      <th scope="row"><div class="form-check">
-						  <label class="form-check-label">
-						  	<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="activo" name="opcion1"> activo
+				  	<?php 
+						$conexion= new PDO('mysql:host=localhost;dbname=dbgenerica','root','');
+						$usuario = $conexion->prepare("SELECT id, usuario, email FROM usuarios");
+						$usuario->execute();
+						$usuario = $usuario->fetchAll();
 
-						  </label>
+						foreach ($usuario as $user) {
+							echo "<tr>";
+					        echo "<td><input class='form-check-input position-static' type='checkbox' id='blankCheckbox' value='activo' name='opcion1'></td>";
+					        echo "<td>" . $user["usuario"]. "</td>";
+					        echo "<td>" . $user["email"]. "</td>";
+					        echo "<td><a href='descripcion.php'><button type='button' class='btn btn-warning'>Descripcion solicitud</button></a></td></td>";
+					        echo "</tr>";
+						}
+					?>	
+
+				  	
+				    <!-- <tr>
+				      <th scope="row"><div class="form-check">
+						  <label class="form-check-label"></label>
+						  	<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="activo" name="opcion1">
+
+						  
 						</div>
 					</th>
 				      <td>Mark</td>
@@ -108,11 +129,12 @@
 				      <td>Jacob</td>
 				      <td>Thornton</td>
 				      <td><button type="button" class="btn btn-warning">Descripcion solicitud</button></td>
-				    </tr>
+				    </tr> -->
 				  
 				  </tbody>
 				</table>
-
+				<br>
+				<button type="button" class="btn btn-success btn-lg btn-block">Aprobar</button>
 
 
 
